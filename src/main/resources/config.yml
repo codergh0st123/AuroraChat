@@ -1,0 +1,28 @@
+globalChatEnabled: true
+localChatEnabled: true
+localChatRadius: 100
+globalChatPrefix: "!"
+useLuckPermsPrefix: true
+
+messages:
+  chat:
+    global_format: "&cɢ &f%tab_tabprefix% &f{игрок}: {сообщение}"
+    local_format: "&7ʟ &f%tab_tabprefix% &f{игрок}: {сообщение}"
+  pm:
+    usage: "&7Использование: /pm <игрок> <сообщение>"
+    sender: "&7Вы прошептали {получатель}: {сообщение}"
+    recipient: "&7Игрок {отправитель} прошептал вам: {сообщение}"
+  errors:
+    only_players: "&cТолько игроки могут использовать эту команду!"
+    player_not_found: "&cИгрок не найден или оффлайн!"
+    pm_self: "&cВы не можете отправить сообщение самому себе!"
+    no_permission: "&cУ вас нет прав для использования этой команды!"
+  menu:
+    sound_selection: "&9Выберите звук личных сообщений"
+    sound_selected: "&aВы выбрали звук: {звук}"
+  spy:
+    usage: "&7Использование: /spy <on|off>"
+    enabled: "&aРежим шпиона включен!"
+    disabled: "&aРежим шпиона выключен!"
+    already_enabled: "&cРежим шпиона уже включен!"
+    already_disabled: "&cРежим шпиона уже выключен!"

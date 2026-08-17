@@ -1,0 +1,40 @@
+name: AuroraChat
+version: '${version}'
+main: ru.aurora.chat.AuroraChatPlugin
+api-version: '1.21'
+author: Aurora
+softdepend:
+  - LuckPerms
+  - TAB
+  - PlaceholderAPI
+
+commands:
+  pm:
+    description: Отправить личное сообщение игроку.
+    usage: /pm <игрок> <сообщение>
+    aliases: [msg, tell, w]
+  spy:
+    description: Включить или выключить режим шпиона личных сообщений.
+    usage: /spy <on|off>
+  pmsound:
+    description: Открыть меню выбора звука личных сообщений.
+    usage: /pmsound
+    aliases: [soundpm]
+  aurorachat:
+    description: Управление AuroraChat.
+    usage: /aurorachat reload
+    aliases: [ac]
+
+permissions:
+  aurorachat.pm:
+    description: Разрешает отправлять личные сообщения.
+    default: true
+  aurorachat.sound:
+    description: Разрешает выбирать звук личных сообщений.
+    default: true
+  aurorachat.spy:
+    description: Разрешает просматривать личные сообщения в режиме шпиона.
+    default: op
+  aurorachat.reload:
+    description: Разрешает перезагружать конфигурацию AuroraChat.
+    default: op

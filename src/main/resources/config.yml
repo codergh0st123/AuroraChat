@@ -4,10 +4,32 @@ localChatRadius: 100
 globalChatPrefix: "!"
 useLuckPermsPrefix: true
 
+CHAT_RESTRICTION:
+  ENABLED: true
+  FORBIDDEN_CHARACTERS: []
+  MESSAGE:
+    - "&cВ сообщении есть запрещённый символ: &f{СИМВОЛ}"
+
 messages:
   chat:
-    global_format: "&cɢ &f%tab_tabprefix% &f{игрок}: {сообщение}"
-    local_format: "&7ʟ &f%tab_tabprefix% &f{игрок}: {сообщение}"
+    global_format: "&cɢ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок}: {сообщение}"
+    local_format: "&7ʟ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок}: {сообщение}"
+    TEST_STYLE:
+      GLOBAL: "&6ᴛ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок}: {сообщение}"
+      LOCAL: "&eᴛ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок}: {сообщение}"
+      RADIUS: 100
+    ADMIN_STYLE:
+      GLOBAL: "&b◉ &7/ &f◉ &c❤ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок} &8» &f{сообщение}"
+      LOCAL: "&b◉ &7/ &f◉ &c❤ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок} &8» &f{сообщение}"
+      RADIUS: 100
+    MONEY_STYLE:
+      GLOBAL: "&b◉ &7/ &f◉ &dG &a688₽ &6+100₮ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок} &8» &f{сообщение}"
+      LOCAL: "&b◉ &7/ &f◉ &dG &a688₽ &6+100₮ &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок} &8» &f{сообщение}"
+      RADIUS: 100
+    BALANCE_STYLE:
+      GLOBAL: "&bL &7/ &f◉ &dG &c❤ &d74,581 &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок} &8» &f{сообщение}"
+      LOCAL: "&bL &7/ &f◉ &dG &c❤ &d74,581 &f%CORE_LUCKPERMS:GROUP:PREFIX% &f{игрок} &8» &f{сообщение}"
+      RADIUS: 100
   pm:
     usage: "&7Использование: /pm <игрок> <сообщение>"
     sender: "&7Вы прошептали {получатель}: {сообщение}"
@@ -26,3 +48,23 @@ messages:
     disabled: "&aРежим шпиона выключен!"
     already_enabled: "&cРежим шпиона уже включен!"
     already_disabled: "&cРежим шпиона уже выключен!"
+  CHAT_COLOR:
+    USAGE: "&7Использование: /aurorachat setcolor <ник> <цвет>"
+    INVALID: "&cЦвет или градиент не может быть пустым и длиннее 128 символов."
+    SET: "&aИгроку {ИГРОК} назначен цвет сообщения: {ЦВЕТ}"
+    TARGET_SET: "&aВы успешно изменили цвет сообщения!"
+  CHAT_STYLE:
+    USAGE:
+      - "&7Использование: /aurorachat set <стиль>"
+      - "&7Доступные стили: {СТИЛИ}"
+      - "&7Для возврата к обычному чату: /aurorachat set auto"
+    SELECTED:
+      - "&aВы выбрали стиль чата: {СТИЛЬ}"
+    AUTOMATIC_SELECTED:
+      - "&aВы вернулись к обычному режиму чата."
+    NOT_FOUND:
+      - "&cСтиль чата {СТИЛЬ} не найден."
+    NOT_FOUND_SINGLE: "&cСтиль чата {СТИЛЬ} не найден."
+    CONSOLE_USAGE: "&7Использование: /aurorachat set <ник> <стиль>"
+    TARGET_SELECTED: "&aИгроку {ИГРОК} назначен стиль чата: {СТИЛЬ}."
+    TARGET_AUTOMATIC_SELECTED: "&aИгроку {ИГРОК} возвращен обычный режим чата."

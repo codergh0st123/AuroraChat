@@ -1,5 +1,5 @@
 name: AuroraChat
-version: '${version}'
+version: '1.0.0'
 main: ru.aurora.chat.AuroraChatPlugin
 api-version: '1.21'
 author: Aurora
@@ -22,7 +22,7 @@ commands:
     aliases: [soundpm]
   aurorachat:
     description: Управление AuroraChat.
-    usage: /aurorachat reload
+    usage: /aurorachat <reload|set>
     aliases: [ac]
 
 permissions:
@@ -37,4 +37,16 @@ permissions:
     default: op
   aurorachat.reload:
     description: Разрешает перезагружать конфигурацию AuroraChat.
+    default: op
+  aurorachat.set:
+    description: Разрешает выбирать собственный стиль чата.
+    default: true
+  aurorachat.set.other:
+    description: Разрешает назначать стиль чата другому игроку.
+    default: op
+  aurorachat.setcolor:
+    description: Разрешает назначать цвет или градиент сообщения игроку.
+    default: op
+  aurorachat.restriction.bypass:
+    description: Разрешает обходить список запрещённых символов в публичном чате.
     default: op

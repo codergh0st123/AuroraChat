@@ -29,7 +29,7 @@ public final class ChatFormatService {
 
     private Component format(String path, Player sender, String message) {
         String prefix = prefixes.getPrefix(sender, messages.getBoolean("useLuckPermsPrefix"));
-        String template = messages.getString(path)
+        String template = messages.replacePlaceholders(sender, messages.getString(path))
                 .replace(TAB_PREFIX_PLACEHOLDER, prefix)
                 .replace("{игрок}", sender.getName())
                 .replace("{сообщение}", MESSAGE_MARKER);

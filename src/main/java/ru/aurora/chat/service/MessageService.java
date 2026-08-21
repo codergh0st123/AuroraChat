@@ -35,6 +35,10 @@ public final class MessageService {
         return config.getString(path, "");
     }
 
+    public String replacePlaceholders(Player player, String text) {
+        return textFormatter.replacePlaceholders(player, text);
+    }
+
     public Component message(String path) {
         return textFormatter.format(null, getString(path));
     }

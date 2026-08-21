@@ -27,8 +27,12 @@ public final class TextFormatService {
         this.placeholders = placeholders;
     }
 
+    public String replacePlaceholders(Player player, String text) {
+        return placeholders.apply(player, text);
+    }
+
     public Component format(Player player, String text) {
-        String resolved = normalizeHexTags(placeholders.apply(player, text));
+        String resolved = normalizeHexTags(replacePlaceholders(player, text));
         Matcher matcher = GRADIENT_PATTERN.matcher(resolved);
         TextComponent.Builder result = Component.text();
         int currentIndex = 0;
